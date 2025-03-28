@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="module" src="./script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+
+<body
+  style="background-color: #fff; font-family: Garamond, serif; background-image: url(./background.jpg); background-size: cover; height: 100vh; width: 100wh">
+
+  <div
+    style="position: absolute; width: 99%; display: flex; backdrop-filter: blur(10px); background-color: rgba(246, 241, 246, 0.25); color: #fff; justify-content: space-between; border-radius: 16px;">
+    <p style="margin-left: 16px; font-weight: 200; background-color: rgba(246, 241, 246, 0.10); padding: 4px 12px; border-radius: 16px; border: 1px dotted; cursor: pointer"
+      id="welcomeopen" data-window="welcome">
+      SydneyOS
+    </p>
+    <p style="margin-left: 16px; font-weight: 200; background-color: rgba(246, 241, 246, 0.10); padding: 4px 12px; border-radius: 16px; border: 1px dotted"
+      id="eightballopen" data-window="eightball">
+      Forever Curious
+    </p>
+
+    <p id="timeElement"
+      style="margin-right: 16px; font-weight: 200; background-color: rgba(246, 241, 246, 0.10); padding: 4px 12px; border-radius: 16px; border: 1px dotted;">
+      Time
+    </p>
+  </div>
+  <!-- desktop apps -->
+  <div id="desktopApps" style="padding-top: 64px; padding-left: 16px;">
+    <!-- About Me app -->
+    <div style="text-align: center; padding: 16px; width: fit-content" id="aboutIcon" data-window="aboutScreen">
+      <img src="./heart.png" style="width: 64px; height: 64px; border-radius: 16px;">
+      <p style="margin: 0px; color: #fff;">About Me</p>
+    </div>
+
+    <!-- Resume app -->
+    <div style="text-align: center; padding: 16px; width: fit-content" id="resumeIcon" data-window="ResumeScreen">
+      <img src="./moon.png" style="width: 64px; height: 64px; border-radius: 16px;">
+      <p style="margin: 0px; color: #fff;">Resume</p>
+    </div>
+
+    <!-- Portfolio app -->
+    <div style="text-align: center; padding: 16px; width: fit-content" id="portfolioIcon" data-window="portfolioScreen">
+      <img src="./art.png" style="width: 64px; height: 64px; border-radius: 16px;">
+      <p style="margin: 0px; color: #fff;">Portfolio</p>
+    </div>
+
+    <!-- Connect app -->
+    <div style="text-align: center; padding: 16px; width: fit-content" id="connectIcon" data-window="connectScreen">
+      <img src="./stars.png" style="width: 64px; height: 64px; border-radius: 16px;">
+      <p style="margin: 0px; color: #fff;">Connect</p>
+    </div>
+
+    <!-- windows -->
+    <!-- about window -->
+    <div class="window" id="aboutScreen"
+      style="top: calc(50% - 240px); left: calc(50% - 260px); display: none; width: 600px; height: 500px; overflow: hidden; border-radius: 12px;">
+      <div class="windowheader" id="aboutheader">
+        <div class="closebutton" id="aboutclose"></div>
+        <p class="headertext">About Me</p>
+        <div style="width: 16px; margin-right: 6px; height: 16px;"></div>
+      </div>
+      <!-- Flex container to align sidebar and content -->
+      <div style="display: flex; height: calc(100% - 40px); padding: 10px; font-family: Courier;">
+        <!-- Sidebar Element -->
+        <div id="sidebar"
+          style="background-color: #F9F9F9; width: 100px; margin-right: 10px; padding: 10px; border-radius: 10px; flex-shrink: 0;">
+        </div>
+        <!-- Main Content with scrolling -->
+        <div id="aboutContent"
+          style="flex: 1; background-color: #fff; border-radius: 12px; padding: 16px; overflow-y: auto;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Resume window -->
+    <div class="window" id="ResumeScreen" style="top: calc(50% - 240px); left: calc(50% - 260px); 
+               display: none; width: 600px; height: 500px; 
+               overflow: hidden; border-radius: 12px;">
+      <div class="windowheader" id="resumeheader">
+        <div class="closebutton" id="resumeclose"></div>
+        <p class="headertext">Resume</p>
+        <div style="width: 16px; margin-right: 6px; height: 16px;"></div>
+      </div>
+
+      <!-- Main Content with scrolling -->
+      <div style="display: flex; height: calc(100% - 40px); padding: 10px; font-family: Courier;">
+        <div id="resumeContent" style="flex: 1; background-color: #fff; border-radius: 12px; 
+                       padding: 16px; overflow: auto; display: flex; 
+                       justify-content: center; align-items: center;">
+
+          <!-- Embed the PDF file -->
+          <iframe src="/SC25.pdf" style="width: 100%; height: 100%; border-radius: 12px;" frameborder="0">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Portfolio window -->
+    <div class="window" id="portfolioScreen"
+      style="top: calc(50% - 240px); left: calc(50% - 260px); display: none; width: 800px; height: 450px; overflow: hidden; border-radius: 12px;">
+      <div class="windowheader" id="portfolioheader">
+        <div class="closebutton" id="portfolioclose"></div>
+        <p class="headertext">Portfolio</p>
+        <div style="width: 16px; margin-right: 6px; height: 16px;"></div>
+      </div>
+      <!-- Main Content with scrolling -->
+      <div style="display: flex; height: calc(100% - 40px); padding: 10px; font-family: Courier;">
+        <div id="portfolioContent" style="flex: 1; background-color: #fff; border-radius: 12px; 
+                   padding: 16px; overflow: auto; display: flex; 
+                   justify-content: center; align-items: center;">
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Connect window -->
+  <div class="window" id="connectScreen"
+      style="top: calc(50% - 240px); left: calc(50% - 260px); display: none; width: 200px; height: 200px; overflow: hidden; border-radius: 12px;">
+      <div class="windowheader" id="connecttheader">
+        <div class="closebutton" id="connectclose"></div>
+        <p class="headertext">Connect</p>
+        <div style="width: 16px; margin-right: 6px; height: 16px;"></div>
+      </div>
+      <!-- Main Content with scrolling -->
+      <div style="display: flex; height: calc(100% - 40px); padding: 10px; font-family: Courier;">
+        <div id="connectContent" style="flex: 1; border-radius: 12px; 
+                   padding: 16px; overflow: auto; display: flex; 
+                   justify-content: center; align-items: center;">
+
+        </div>
+      </div>
+  </div>
+
+    <!--welcome screen -->
+    <div class="window" id="welcome"
+      style="position: absolute; top: 50%; left: 50%; 
+    transform: translate(-50%, -50%); padding: 5px; border: solid; width: fit-content; border-color: #fff; border-radius: 16px; background: #fff; background-color: rgba(246, 241, 246, 0.25); ">
+      <div class="windowheader" id="welcomeheader"
+        style="width: 100%; display: flex; align-items: center; cursor: move; justify-content: space-between; margin-top: 8px;">
+        <div class="closebutton" id="welcomeclose"
+          style="width: 16px; height: 16px; cursor: pointer; background-color: #f2d0f2; border-radius: 16px; border: solid 1px rgba(0, 0, 0, 0.25); margin-left: 6px;">
+        </div>
+        <p class="headertext" style="margin: 0px; color: #fff; font-weight: 500; margin-right: 250px">°☆</p>
+      </div>
+      <div style="background-color: #fff; margin: 6px; border-radius: 12px; object-fit: cover; padding: 16px;">
+        <img style="height: 110px; object-fit: cover; border-radius: 16px;" src="welcome.png" />
+        <h1 style="padding: 4px; margin: 4px; background-color: #fff; color: #827c36"></h1>
+        <p style="font-size: 15px; color: #262628"> <dfn>SydneyOS</dfn> is a space to showcase a bit about myself.
+        </p>
+
+      </div>
+    </div>
+
+    <div class="window" id="eightball"
+      style="top: calc(50% - 240px); left: calc(50% - 260px); display: none; width: 350px; height: 350px;">
+      <div class="windowheader" id="eightballheader">
+        <div class="closebutton" id="eightballclose"></div>
+        <p class="headertext" style="margin-right: 128px;">Magic 8-Ball</p>
+      </div>
+
+      <div class="ball-container" id="eightball-container">
+        <div class="ball" id="magicball">?</div>
+        <div class="answer" id="answer"></div>
+      </div>
+
+      <button class="ask-button" id="askButton">Ask away</button>
+    </div>
+
+</body>
+
+</html>
