@@ -4,6 +4,7 @@ My second time making a website! I owe so much credit to the team at [Hacks Club
 
 
 - Background image taken by me!
+- Face doodle from Notion. 
 - App icons found on Canva. 
 - Welcome image made on Canva by me. 
 
