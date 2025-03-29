@@ -84,8 +84,8 @@ document.addEventListener("DOMContentLoaded", function () {
     makeClosable();
     dragElement(screen);
 
-    // Initially hide the window
-    screen.style.display = "none";
+    // Uncomment to make hide the welcome window
+    // screen.style.display = "none";
   }
 
   // Initialize windows
@@ -108,7 +108,7 @@ var AboutContent = [
       <p style="margin-left: 30px; margin-right: 20px;">
         My name is Sydney and I am a data scientist with a passion for learning and exploring new
         technologies.<br><br>
-        I am interested in exploring how ML/AI intersects with human-centered design, ethics, and privacy, aiming to create solutions that are both innovative and responsible.
+        I am interested in exploring how ML/AI intersects with human-centered design, ethics, and privacy. My goal is to create solutions that are both innovative and responsible.
       </p>
     </div>`
   },
