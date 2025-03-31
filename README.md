@@ -5,8 +5,7 @@ My second time making a website! I owe so much credit to the team at [Hacks Club
 
 - Background image taken by me (please don't use). 
 - Face doodle from Notion. 
-- App icons found on Canva. 
-- Welcome image made on Canva by me. 
+- App icons and Welcome image found and made on Canva respectively. 
 
 ```
 sydneyos.v1/
