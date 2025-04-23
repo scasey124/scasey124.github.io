@@ -143,34 +143,39 @@ html {
 
 
 .project-container {
+  padding-top: 50px;
   max-width: 1000px;
   margin: 50px auto;
 }
 
 .project {
-  margin: 30px;
+  padding-top: 70px;
+  margin: 15px 30px; 
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr);
   align-items: center;
+
 }
 
 .project-content {
   position: relative;
   grid-column: 1 / 7;
   grid-row: 1 / -1;
+  min-height: 150px; /* Ensures content grows */
 }
 
 .project-label {
   color: #a8bbe1;
   font-family: Garamond, serif;
+  margin-top: 50px;
 }
 
 .project-title {
-  font-size: 2rem;
-  margin: 30px 0 20px;
+  font-size: 1.25rem;
   color: #1f1f1f;
+  width: 150%;
 }
 
 .project-details {
@@ -184,7 +189,8 @@ html {
 .project-details p {
   background-color: rgba(222, 236, 237, 0.95);
   padding: 20px 25px;
-  
+  width: 150%;
+  z-index: 1;
 }
 
 .project-details ul {
@@ -201,22 +207,42 @@ html {
 .project-img {
   position: relative;
   border-radius: 2px;
-  grid-column: 6 / -1;
+  grid-column: 7 / -1;
   grid-row: 1 / -1;
-  max-width: 400px; /* Adjust as needed */
-  width: 100%; /* Makes it responsive */
+  max-width: 400px;
+  width: 100%;
   height: auto;
   z-index: 0;
   opacity: 0.75;
+  min-height: 150px; /* Ensures image can grow */
 }
 
 .project-img img {
+  padding-top: 100px;
   border-radius: 2px;
   position: relative;
   mix-blend-mode: multiply;
-  max-width: 100%; /* Ensures it doesn’t exceed the container */
+  max-width: 100%; 
   height: auto; /* Maintains aspect ratio */
-  display: block; /* Ensures no extra space below the image */
+  display: block; 
+}
+
+
+.portfolio-nav-button {
+  margin-left: 16px;
+  font-weight: 200;
+  background-color: rgba(246, 241, 246, 0.10);
+  padding: 4px 12px;
+  border-radius: 16px;
+  border: 1px dotted;
+  cursor: pointer;
+  font-family: Courier;
+  color: #fff;
+}
+
+/* Optional hover state */
+.portfolio-nav-button:hover {
+  background-color: #f2d0f2;
 }
 
 

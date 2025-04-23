@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   // Time update function
-  setInterval(function () {
+  setInterval(function() {
     const timeElement = document.querySelector("#timeElement");
     if (timeElement) {
       timeElement.innerHTML = new Date().toLocaleString();
@@ -108,7 +108,7 @@ var AboutContent = [
       <p style="margin-left: 30px; margin-right: 20px;">
         My name is Sydney and I am a data scientist with a passion for learning and exploring new
         technologies.<br><br>
-        I am interested in exploring how ML/AI intersects with human-centered design, ethics, and privacy. My goal is to create solutions that are both innovative and responsible.
+        I am interested in exploring how ML/AI intersects with human-centered design, ethics, and privacy, aiming to create solutions that are both innovative and responsible.
       </p>
     </div>`
   },
@@ -174,41 +174,138 @@ function addToSideBar() {
 };
 
 var PortfolioContent = [
-  { content: `<div class="project-container">
+  {
+    content: `<div class="project-container">
   <div class="project">
     <div class="project-content">
-      <div class="project-label">Data Science</div>
-      <h4 class="project-title">Coming soon!</h4>
+      <div class="project-label">Data Science / Data Engineering</div>
+      <h4 class="project-title">End-to-End Unsupervised ML Pipeline for Pharmaceutical Adverse Events Analysis</h4>
       <div class="project-details">
-        <p>claude monet, "morning in the hay near giverney", 1897</p>
+        <p>Developed a scalable, containerized data analytics pipeline to analyze FDA drug adverse event data using unsupervised machine learning. Designed and implemented an end-to-end ETL workflow leveraging Docker, Apache Airflow, and the OpenFDA API. Built an object-oriented framework to process both structured and unstructured data, applying scikit-learn clustering algorithms to uncover patterns in adverse event reports. Integrated a PostgreSQL persistence layer and am architecting the solution for seamless deployment on cloud platforms such as AWS and GCP.
+        </p>
         <ul>
-          <li>Details</li>
-          <li>Details</li>
-          <li>Details</li>
+          <li>Python, OOP, API integration, Machine Learning</li>
+          <li>Docker, Airflow, PostgreSQL</li>
+          <li>Personal project</li>
         </ul>
       </div>
     </div>
     
     <div class="project-img">
-      <img src="/filler.jpg" alt="Test Image" />
+      <img src="/filler.jpg" alt="claude monet, «morning in the hay near giverney», 1897 year" />
     </div>
     
   </div>
-</div>` }
+</div>`},
+
+  {
+    content: `<div class="project-container">
+    <div class="project">
+      <div class="project-content">
+        <div class="project-label">Data Science</div>
+        <h4 class="project-title"> PubMed Insight Explorer: Article Discovery & Semantic Analysis Tool</h4>
+        <div class="project-details">
+          <p>This interactive Streamlit application enables users to perform intelligent literature exploration by querying the PubMed database for the latest research articles using a custom keyword. Upon retrieval, articles are organized into a downloadable CSV format enriched with key metadata such as publication date, journal name, and author details.
+
+In addition to basic search, the tool performs keyword co-occurrence analysis, generating an interactive network graph that visualizes relationships between frequently mentioned terms—helping users identify patterns, emerging subtopics, or research clusters. To further assist with synthesis, the application will integrate cutting-edge Natural Language Processing (NLP) features (being implemented at the moment).
+          </p>
+          <ul>
+            <li>Python</li>
+            <li>NLP,  API integration, Streamlit</li>
+            <li>Personal project</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-img">
+        <img src="/filler.jpg" alt="claude monet, «morning in the hay near giverney», 1897 year" />
+      </div>
+
+    </div>
+  </div>`},
+
+  {
+    content: `<div class="project-container">
+      <div class="project">
+        <div class="project-content">
+          <div class="project-label">Data Analytics</div>
+          <h4 class="project-title"> Healthcare Quality Improvement Analytics (Synthetic Data)</h4>
+          <div class="project-details">
+            <p>Analyzed synthetic healthcare quality improvement data to explore patient demographics using R for data cleaning, transformation, and statistical analysis. Developed a dynamic, interactive Tableau dashboard to communicate key insights and trends, highlighting demographic patterns. Optimized the dashboard for clarity and usability with filterable views and drill-down capabilities, enhancing user engagement and interpretability.
+            </p>
+            <ul>
+              <li>R</li>
+              <li>Tableau, Data preprocessing, Analytics</li>
+              <li>Personal project</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-img">
+          <img src="/filler.jpg" alt="claude monet, «morning in the hay near giverney», 1897 year" />
+        </div>
+
+      </div>
+    </div>`},
+
+  {
+    content: `<div class="project-container">
+    <div class="project">
+      <div class="project-content">
+        <div class="project-label">Data Science</div>
+        <h4 class="project-title"> Predicting Length of Critical Care Days in Welsh Intensive Care</h4>
+        <div class="project-details">
+          <p>Developed and optimized a two-stage predictive model using a Random Forest classifier and XGBoost regressor to estimate critical care days from a novel electronic health records dataset. Achieved a mean absolute error (MAE) of 1.732 and a sensitivity of 0.892 for cases under nine days. Leveraged SHAP (Shapley Additive Explanations) to identify key predictive features and improve model interpretability.
+          </p>
+          <ul>
+            <li>Python</li>
+            <li>Machine Learning, Real world data, EHR</li>
+            <li>UCL MSc</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-img">
+        <img src="/filler.jpg" alt="claude monet, «morning in the hay near giverney», 1897 year" />
+      </div>
+
+    </div>
+  </div>`}
 ];
+
+function createProjectNavigation() {
+  const navContainer = document.querySelector("#portfolioNav");
+  PortfolioContent.forEach((project, index) => {
+    const button = document.createElement("button");
+    button.textContent = `Project ${index + 1}`;
+    button.className = "portfolio-nav-button"; // Apply the CSS class
+    button.onclick = () => setPortfolioContent(index);
+    navContainer.appendChild(button);
+  });
+
+  // Set the first project by default
+  setPortfolioContent(0);
+}
+
+// Call this function when the page loads
+window.onload = function() {
+  createProjectNavigation();
+};
 
 function setPortfolioContent(index) {
   var portfolioContent = document.querySelector("#portfolioContent");
+  console.log(PortfolioContent[index].content); // Check the content
   portfolioContent.innerHTML = PortfolioContent[index].content;
 }
 
 // Automatically set the portfolio content on page load
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   setPortfolioContent(0); // Load first (or only) portfolio item
 });
 
 var ConnectContent = [
-  { title: "Let's connect!",
+  {
+    title: "Let's connect!",
     content: `
     <ul class="custom-star-bullets">
        <li>
@@ -227,7 +324,7 @@ function setConnectContent(index) {
 }
 
 // Automatically set the portfolio content on page load
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   setConnectContent(0); // Load first (or only) connect item
 });
 
@@ -236,8 +333,8 @@ document.addEventListener('DOMContentLoaded', addToSideBar);
 
 document.getElementById('askButton').addEventListener('click', function() {
   const answers = [
-    'Yes', 'No', 'Maybe', 'Ask again later', 'Cannot predict now',
-    'Definitely not', 'Absolutely!', 'My sources say no', 'It is certain', 'Don’t count on it'
+    'It is certain', 'Reply hazy, try again', 'Don’t count on it', 'It is decidedly so', 'Ask again later', 'My reply is no',
+    'Without a doubt', 'Better not tell you now', 'My sources say no', 'Yes definitely', 'Cannot predict now', 'Outlook not so good', 'You may rely on it', 'Concentrate and ask again', 'Very doubtful', 'As I see it, yes', 'Most likely', 'Outlook good', 'Yes, Signs point to yes'
   ];
 
   // Randomly pick an answer

@@ -91,7 +91,7 @@
                        justify-content: center; align-items: center;">
 
           <!-- Embed the PDF file -->
-          <iframe src="/SC25.pdf" style="width: 100%; height: 100%; border-radius: 12px;" frameborder="0">
+          <iframe src="/SCC_25.pdf" style="width: 100%; height: 100%; border-radius: 12px;" frameborder="0">
           </iframe>
         </div>
       </div>
@@ -100,24 +100,27 @@
 
     <!-- Portfolio window -->
     <div class="window" id="portfolioScreen"
-      style="top: calc(50% - 240px); left: calc(50% - 260px); display: none; width: 800px; height: 450px; overflow: hidden; border-radius: 12px;">
+      style="top: calc(50% - 200px); left: calc(50% - 260px); display: none; width: 800px; height: 550px; border-radius: 12px;">
       <div class="windowheader" id="portfolioheader">
         <div class="closebutton" id="portfolioclose"></div>
         <p class="headertext">Portfolio</p>
         <div style="width: 16px; margin-right: 6px; height: 16px;"></div>
       </div>
       <!-- Main Content with scrolling -->
-      <div style="display: flex; height: calc(100% - 40px); padding: 10px; font-family: Courier;">
+      <div
+        style="display: flex; flex-direction: column; height: calc(100% - 40px); padding: 10px; font-family: Courier;">
+        <!-- Navigation buttons -->
+        <div id="portfolioNav" style="margin-bottom: 10px; display: flex; justify-content: center; gap: 10px;"></div>
+        <!-- Content area -->
         <div id="portfolioContent" style="flex: 1; background-color: #fff; border-radius: 12px; 
-                   padding: 16px; overflow: auto; display: flex; 
-                   justify-content: center; align-items: center;">
-          
+                      padding: 0 16px 16px 16px; overflow: auto; display: flex; 
+                      justify-content: center; align-items: center;">
         </div>
       </div>
     </div>
 
     <!-- Connect window -->
-  <div class="window" id="connectScreen"
+    <div class="window" id="connectScreen"
       style="top: calc(50% - 240px); left: calc(50% - 260px); display: none; width: 200px; height: 200px; overflow: hidden; border-radius: 12px;">
       <div class="windowheader" id="connecttheader">
         <div class="closebutton" id="connectclose"></div>
@@ -132,7 +135,7 @@
 
         </div>
       </div>
-  </div>
+    </div>
 
     <!--welcome screen -->
     <div class="window" id="welcome"
