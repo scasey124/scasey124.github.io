@@ -181,7 +181,7 @@ var PortfolioContent = [
       <div class="project-label">Data Science / Data Engineering</div>
       <h4 class="project-title">End-to-End Unsupervised ML Pipeline for Pharmaceutical Adverse Events Analysis</h4>
       <div class="project-details">
-        <p>Developed a scalable, containerized data analytics pipeline to analyze FDA drug adverse event data using unsupervised machine learning. Designed and implemented an end-to-end ETL workflow leveraging Docker, Apache Airflow, and the OpenFDA API. Built an object-oriented framework to process both structured and unstructured data, applying scikit-learn clustering algorithms to uncover patterns in adverse event reports. Integrated a PostgreSQL persistence layer and am architecting the solution for seamless deployment on cloud platforms such as AWS and GCP.
+        <p>Developed a scalable, containerized data analytics pipeline to analyze FDA drug adverse event data using unsupervised machine learning. Designed and implemented an end-to-end ETL workflow leveraging Docker, Apache Airflow, and the OpenFDA API. Built an object-oriented framework to process both structured data, applying scikit-learn clustering algorithms to uncover patterns in adverse event reports. Integrated a PostgreSQL persistence layer and am architecting the solution for seamless deployment on cloud platforms such as AWS and GCP.
         </p>
         <ul>
           <li>Python, OOP, API integration, Machine Learning</li>
