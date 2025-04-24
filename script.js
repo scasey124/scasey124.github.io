@@ -181,7 +181,9 @@ var PortfolioContent = [
       <div class="project-label">Data Science / Data Engineering</div>
       <h4 class="project-title">End-to-End Unsupervised ML Pipeline for Pharmaceutical Adverse Events Analysis</h4>
       <div class="project-details">
-        <p>Developing a scalable, containerized data analytics pipeline to analyze FDA drug adverse event data using unsupervised machine learning. Designed and implemented an end-to-end ETL workflow leveraging Docker, Apache Airflow, and the OpenFDA API. Building an object-oriented framework to process structured data, applying scikit-learn clustering algorithms to uncover patterns in adverse event reports. Integrating a PostgreSQL persistence layer and am architecting the solution for seamless deployment on cloud platforms such as AWS and GCP.
+        <p>Developing a scalable, containerized data analytics pipeline to analyze FDA drug adverse event data using unsupervised machine learning. 
+        Designed and implemented an end-to-end ETL workflow leveraging Docker, Apache Airflow, and the OpenFDA API. Building an object-oriented framework to process structured data, applying scikit-learn clustering algorithms to uncover patterns in adverse event reports.
+        Integrating a PostgreSQL persistence layer and am architecting the solution for seamless deployment on cloud platforms such as AWS and GCP.
         </p>
         <ul>
           <li>Python, OOP, API integration, Machine Learning</li>
@@ -207,7 +209,7 @@ var PortfolioContent = [
         <div class="project-details">
           <p>This interactive Streamlit application enables users to perform intelligent literature exploration by querying the PubMed database for the latest research articles using a custom keyword. Upon retrieval, articles are organized into a downloadable CSV format enriched with key metadata such as publication date, journal name, and author details.
 
-In addition to basic search, the tool performs keyword co-occurrence analysis, generating an interactive network graph that visualizes relationships between frequently mentioned terms—helping users identify patterns, emerging subtopics, or research clusters. To further assist with synthesis, the application will integrate cutting-edge Natural Language Processing (NLP) features (being implemented at the moment).
+          In addition to basic search, the tool performs keyword co-occurrence analysis, generating an interactive network graph that visualizes relationships between frequently mentioned terms—helping users identify patterns, emerging subtopics, or research clusters. To further assist with synthesis, the application will integrate cutting-edge Natural Language Processing (NLP) features (being implemented at the moment).
           </p>
           <ul>
             <li>Python</li>
