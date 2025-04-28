@@ -317,7 +317,7 @@ var ConnectContent = [
           <li>
             <a href="https://public.tableau.com/app/profile/sydney.casey/vizzes">Tableau</a></li>
               <li> 
-                  <a href = "https://syd2401.substack.com/">Substack</a></li>
+                  <a href="https://syd2401.substack.com/">Substack</a></li>
         
   ` }
 ];
